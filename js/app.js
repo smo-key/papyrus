@@ -18,25 +18,25 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   // Listen for template bound event to know when bindings
   // have resolved and content has been stamped to the page
   app.addEventListener('dom-change', function() {
-    console.log('Our app is ready to rock!');
+    console.log('Papyrus is ready to rock your notebook!');
   });
 
   // See https://github.com/Polymer/polymer/issues/1381
-  window.addEventListener('WebComponentsReady', function() {
-    document.querySelector('body').removeAttribute('unresolved');
-
-    // Ensure the drawer is hidden on desktop/tablet
-    var drawerPanel = document.querySelector('#paperDrawerPanel');
-    drawerPanel.forceNarrow = true;
-  });
-
-  // Close drawer after menu item is selected if drawerPanel is narrow
-  app.onMenuSelect = function() {
-    var drawerPanel = document.querySelector('#paperDrawerPanel');
-    if (drawerPanel.narrow) {
-      drawerPanel.closeDrawer();
-    }
-  };
+//  window.addEventListener('WebComponentsReady', function() {
+//    document.querySelector('body').removeAttribute('unresolved');
+//
+//    // Ensure the drawer is hidden on desktop/tablet
+//    var drawerPanel = document.querySelector('#paperDrawerPanel');
+//    drawerPanel.forceNarrow = true;
+//  });
+//
+//  // Close drawer after menu item is selected if drawerPanel is narrow
+//  app.onMenuSelect = function() {
+//    var drawerPanel = document.querySelector('#paperDrawerPanel');
+//    if (drawerPanel.narrow) {
+//      drawerPanel.closeDrawer();
+//    }
+//  };
 
 })(document);
 
