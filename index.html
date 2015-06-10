@@ -53,14 +53,12 @@
     width: 36px;
     padding-right: 12px;
   }
-  #mainToolbar {
+  #mainToolbar, #topBar.paper-toolbar {
     background-color: #f79019;
-  }
-  #mainToolbar:not([style-scope]):not(.style-scope) {
-    box-shadow: none;
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
   }
   #topBar.paper-toolbar {
-    background-color: #f79019;
     margin: 0 auto;
   }
   a {
@@ -76,15 +74,24 @@
 <template is="dom-bind" id="app">
 
   <!-- Main Toolbar -->
-  <paper-toolbar id="mainToolbar">
-    <img id="logo" src="img/logo-128-white.png">
-    <div class="appname paper-font-display2">Papyrus Demo</div>
-    <span class="flex"></span>
+  <paper-toolbar id="mainToolbar" class="medium-tall">
+    <img class="top" id="logo" src="img/logo-128-white.png">
+    <div class="top appname paper-font-display2">Papyrus Demo</div>
+    <span class="top flex"></span>
 
     <!-- Toolbar icons -->
-    <a href="https://github.com/smo-key/papyrus"><paper-icon-button src="img/GitHub-Mark-Light-64px.png"></paper-icon-button></a>
+    <a class="top" href="https://github.com/smo-key/papyrus"><paper-icon-button src="img/GitHub-Mark-Light-64px.png"></paper-icon-button></a>
 
-    <div class="middle"></div>
+    <span class="bottom flex"></span>
+    <paper-tabs id="modetabs" selected="0" class="middle self-end" noInk style="width: 200px; margin: 0 auto;">
+
+      <paper-tab id="design">DESIGN</paper-tab>
+      <paper-tab id="preview">PREVIEW</paper-tab>
+
+    </paper-tabs>
+
+
+    <div class="bottom flex"></div>
 <!--    <div class="appname bottom paper-font-display2">Papyrus</div>-->
 
   </paper-toolbar>

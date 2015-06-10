@@ -18,8 +18,25 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   // Listen for template bound event to know when bindings
   // have resolved and content has been stamped to the page
   app.addEventListener('dom-change', function() {
+    ready();
     console.log('Papyrus is ready to rock your notebook!');
   });
+
+  function ready()
+  {
+    document.querySelector('#design').addEventListener('click', function(e) {
+      console.log(e.type + ' : ' + this.localName);
+      document.querySelector('#topBar.paper-toolbar').style.backgroundColor = '#f79019';
+      document.querySelector('#mainToolbar').style.backgroundColor = '#f79019';
+  });
+
+    document.querySelector('#preview').addEventListener('click', function(e) {
+      console.log(e.type + ' : ' + this.localName);
+      document.querySelector('#topBar.paper-toolbar').style.backgroundColor = '#009dff';
+      document.querySelector('#mainToolbar').style.backgroundColor = '#009dff';
+  });
+  }
+
 
   // See https://github.com/Polymer/polymer/issues/1381
 //  window.addEventListener('WebComponentsReady', function() {
