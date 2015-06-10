@@ -54,7 +54,7 @@
     padding-right: 12px;
   }
   #mainToolbar, #topBar.paper-toolbar {
-    background-color: #f79019;
+    background-color: #ff9800;
     transition: background-color 0.5s;
     -webkit-transition: background-color 0.5s;
   }
@@ -83,13 +83,13 @@
     <a class="top" href="https://github.com/smo-key/papyrus"><paper-icon-button src="img/GitHub-Mark-Light-64px.png"></paper-icon-button></a>
 
     <span class="bottom flex"></span>
-    <paper-tabs id="modetabs" selected="0" class="middle self-end" noInk style="width: 200px; margin: 0 auto;">
+    <paper-tabs id="modetabs" selected="0" class="middle self-end" noInk style="width: 300px; margin: 0 auto;">
 
       <paper-tab id="design">DESIGN</paper-tab>
       <paper-tab id="preview">PREVIEW</paper-tab>
+      <paper-tab id="render">RENDER</paper-tab>
 
     </paper-tabs>
-
 
     <div class="bottom flex"></div>
 <!--    <div class="appname bottom paper-font-display2">Papyrus</div>-->
@@ -97,7 +97,7 @@
   </paper-toolbar>
 
   <!-- Main Content -->
-
+  <main-design id="main-design"></main-design>
 
 </template>
 

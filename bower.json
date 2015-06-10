@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "license": "https://github.com/smo-key/papyrus/LICENSE",
   "dependencies": {
-    "sw-toolbox": "^2.0.0"
+    "sw-toolbox": "^2.0.0",
+    "codemirror": "^5.3.0"
   },
   "devDependencies": {
     "web-component-tester": "*",

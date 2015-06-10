@@ -25,15 +25,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   function ready()
   {
     document.querySelector('#design').addEventListener('click', function(e) {
-      console.log(e.type + ' : ' + this.localName);
-      document.querySelector('#topBar.paper-toolbar').style.backgroundColor = '#f79019';
-      document.querySelector('#mainToolbar').style.backgroundColor = '#f79019';
+      document.querySelector('#topBar.paper-toolbar').style.backgroundColor = '#ff9800'; /* orange 500 */
+      document.querySelector('#mainToolbar').style.backgroundColor = '#ff9800';
   });
 
     document.querySelector('#preview').addEventListener('click', function(e) {
-      console.log(e.type + ' : ' + this.localName);
-      document.querySelector('#topBar.paper-toolbar').style.backgroundColor = '#009dff';
-      document.querySelector('#mainToolbar').style.backgroundColor = '#009dff';
+      document.querySelector('#topBar.paper-toolbar').style.backgroundColor = '#2196F3'; /* blue 500 */
+      document.querySelector('#mainToolbar').style.backgroundColor = '#2196F3';
+  });
+    document.querySelector('#render').addEventListener('click', function(e) {
+      document.querySelector('#topBar.paper-toolbar').style.backgroundColor = '#4CAF50'; /* green 500 */
+      document.querySelector('#mainToolbar').style.backgroundColor = '#4CAF50';
   });
   }
 

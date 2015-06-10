@@ -1,0 +1,70 @@
+<dom-module id="main-design">
+
+  <link rel="stylesheet" href="../../bower_components/codemirror/lib/codemirror.css">
+<script src="../../bower_components/codemirror/lib/codemirror.js"></script>
+  <script src="../../bower_components/codemirror/mode/xml/xml.js"></script>
+  <script src="../../bower_components/codemirror/mode/javascript/javascript.js"></script>
+    <script src="../../bower_components/codemirror/mode/css/css.js"></script>
+  <script src="../../bower_components/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+
+  <style>
+    :host {
+      display: block;
+    }
+  </style>
+
+  <template>
+
+    <textarea id="codehtml" name="codehtml"><style>
+
+</style>
+
+<header>
+
+</header>
+<footer>
+
+</footer>
+
+<page>
+
+  <h1>Heading 1</h1>
+  <p>Heading 1</p>
+
+<page></textarea>
+
+    <script>
+
+      var mixedMode = {
+        name: "htmlmixed"
+      };
+
+      var editor = CodeMirror.fromTextArea(document.getElementById("codehtml"), {
+        lineNumbers: true,
+        mode: mixedMode
+      });
+
+  </script>
+
+
+  </template>
+
+
+
+</dom-module>
+
+  <script>
+  (function() {
+    Polymer({
+      is: 'main-design',
+
+      properties: {
+        greeting: {
+          type: String,
+          value: 'Welcome!',
+          notify: true
+        }
+      }
+    });
+    })();
+  </script>
