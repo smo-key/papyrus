@@ -26,8 +26,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   function ready()
   {
-
-
     document.querySelector('#design').addEventListener('click', function(e) {
       document.querySelector('#topBar.paper-toolbar').style.backgroundColor = '#ff9800'; /* orange 500 */
       document.querySelector('#mainToolbar').style.backgroundColor = '#ff9800';

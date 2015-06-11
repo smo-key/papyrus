@@ -57,6 +57,7 @@
     background-color: #ff9800;
     transition: background-color 0.5s;
     -webkit-transition: background-color 0.5s;
+    position: static;
   }
   #topBar.paper-toolbar, .sizable {
     margin: 0 auto;
@@ -90,7 +91,6 @@
     <!-- Toolbar icons -->
     <a class="top" href="https://github.com/smo-key/papyrus"><paper-icon-button src="img/GitHub-Mark-Light-64px.png"></paper-icon-button></a>
 
-    <span class="bottom flex"></span>
     <paper-tabs id="modetabs" attr-for-selected="id" selected="{{mainselected}}" class="middle self-end" selectable noInk style="width: 300px; margin: 0 auto;">
 
       <paper-tab id="design">DESIGN</paper-tab>
@@ -98,8 +98,6 @@
 <!--      <paper-tab id="render">RENDER</paper-tab>-->
 
     </paper-tabs>
-
-    <div class="bottom flex"></div>
 <!--    <div class="appname bottom paper-font-display2">Papyrus</div>-->
 
   </paper-toolbar>
@@ -110,7 +108,7 @@
       <div page="design">
         <main-design></main-design>
       </div>
-      <div page="preview" class="sizable">
+      <div page="preview">
         <main-preview></main-preview>
       </div>
     </iron-pages>
